@@ -1,0 +1,13 @@
+Customer ID, Customer-Name ,AGE,Annual Income ($),City/Location,Gender Type,Signup Date,Is Active?
+1, Rahul ,25,50000,Mumbai,Male,2026-01-15,True
+2,priya,31,62000,mumbai,female,2026-02-20,True
+3,AMIT,,55000, MUMBAI ,M,15/03/2026,yes
+4, Sneha,29,,Pune,Female ,2026-04-10,No
+5,,-5,45000,,,,
+5,Rohit,42,72000,pune,male,2026-05-12,1
+6,Neha,150,80000,Delhi,F,invalid-date,0
+7,rahul,35,65000,Delhi ,Male,2026-06-20,true
+8,Priya ,28,-10000,delhi,Female,20/07/2026,false
+9,Amit,,58000,Mumbai,unknown,2026-08-01,yes
+10,Sneha,31,,Pune,M,2026-08-10,Y
+11,Rohit,42,72000,Delhi,male,2026-08-15,N
