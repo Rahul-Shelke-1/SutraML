@@ -1,1 +1,3 @@
 ipykernel
+pre-commit
+pandas
