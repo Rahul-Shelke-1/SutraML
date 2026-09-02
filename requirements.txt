@@ -1,3 +1,4 @@
 ipykernel
 pre-commit
 pandas
+scikit-learn
