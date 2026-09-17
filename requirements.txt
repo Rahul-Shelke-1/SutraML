@@ -2,3 +2,5 @@ ipykernel
 pre-commit
 pandas
 scikit-learn
+pytest
+detect-secrets
