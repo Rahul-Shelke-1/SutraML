@@ -8,10 +8,22 @@ on:
       - 'chore/**'
       - 'feat/**'
       - '!feat/notebooks**'
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.github/workflows/application-ci.yml'
 
   pull_request:
     branches:
       - 'main'
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.github/workflows/application-ci.yml'
 
 jobs:
   ##############################################################################
