@@ -118,7 +118,5 @@ jobs:
         with:
           enable-cache: true
 
-      - run: uv sync --dev
-
       - name: Build package
         run: uv build
