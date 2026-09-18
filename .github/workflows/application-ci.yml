@@ -43,7 +43,7 @@ jobs:
         run: uv run ruff check .
 
       - name: Ruff Format Check
-        run: uv run ruff format .
+        run: uv run ruff format --check .
 
       - name: MyPy
         run: |
