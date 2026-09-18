@@ -1,4 +1,4 @@
-name: CI
+name: Application CI
 
 on:
   push:
@@ -8,10 +8,22 @@ on:
       - 'chore/**'
       - 'feat/**'
       - '!feat/notebooks**'
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.github/workflows/application-ci.yml'
 
   pull_request:
     branches:
       - 'main'
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.github/workflows/application-ci.yml'
 
 jobs:
   ##############################################################################
@@ -25,7 +37,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v5
 
-      - name: Setup python
+      - name: Setup Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.11"
@@ -43,7 +55,7 @@ jobs:
         run: uv run ruff check .
 
       - name: Ruff Format Check
-        run: uv run ruff format .
+        run: uv run ruff format --check .
 
       - name: MyPy
         run: |
@@ -117,8 +129,6 @@ jobs:
       - uses: astral-sh/setup-uv@v10.0.1
         with:
           enable-cache: true
-
-      - run: uv sync --dev
 
       - name: Build package
         run: uv build
